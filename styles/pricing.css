@@ -1,0 +1,161 @@
+
+.pricing {
+    padding: 60px 5rem;
+}
+
+.pricing-toggle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.pricing-toggle .toggle-bg {
+    display: flex;
+    background-color: #f5f9ff;
+    border-radius: 10px;
+    padding: 6px;
+}
+
+body.dark .pricing-toggle .toggle-bg {
+    background-color: #000f30;
+}
+
+.toggle-btn {
+    padding: 12px 40px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: transparent;
+    color: #102d47;
+    font-family: 'DM Sans', sans-serif;
+    transition: all 0.3s;
+}
+
+body.dark .toggle-btn {
+    color: #ffffff;
+}
+
+.toggle-btn.active {
+    background-color: #ffffff;
+    color: #2f73f2;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+body.dark .toggle-btn.active {
+    background-color: #081738;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+/* Promo card */
+.promo-card {
+    background-color: #2f73f2;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-column: span 1;
+}
+
+.promo-text {
+    padding: 50px 30px 30px;
+}
+
+.promo-text h3 {
+    color: #ffffff;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.promo-text h3 span {
+    font-weight: 700;
+}
+
+.promo-card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+
+/* Plan cards */
+.plan-card {
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    padding: 36px 28px;
+    display: flex;
+    flex-direction: column;
+}
+
+body.dark .plan-card {
+    background-color: #081738;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.plan-card h4 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+body.dark .plan-card h4 {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.plan-price {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #102d47;
+    margin-bottom: 8px;
+}
+
+body.dark .plan-price {
+    color: #ffffff;
+}
+
+.plan-price .plan-period {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #547593;
+}
+
+.plan-card > p {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.plan-card ul {
+    margin-bottom: 28px;
+    flex-grow: 1;
+}
+
+.plan-card ul li {
+    padding: 8px 0;
+    font-size: 0.95rem;
+    padding-left: 28px;
+    position: relative;
+}
+
+.plan-card ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #2f73f2;
+    font-weight: 700;
+}
+
+.plan-btn {
+    width: 100%;
+    text-align: center;
+}
