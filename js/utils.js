@@ -2,6 +2,7 @@
 function showToast(msg, duration) {
     duration = duration || 3000;
     var toast = document.getElementById('toast');
+    if (!toast) return;
     toast.textContent = msg;
     toast.classList.add('show');
     setTimeout(function () {
@@ -15,27 +16,29 @@ document.addEventListener('DOMContentLoaded', function () {
     var scrollBtn = document.getElementById('scroll-top-btn');
 
     window.addEventListener('scroll', function () {
-        // sticky nav
-        if (window.scrollY > 80) {
-            nav.classList.add('sticky');
-        } else {
-            nav.classList.remove('sticky');
+        if (nav) {
+            if (window.scrollY > 80) {
+                nav.classList.add('sticky');
+            } else {
+                nav.classList.remove('sticky');
+            }
         }
 
-        // scroll to top button
-        if (window.scrollY > 400) {
-            scrollBtn.classList.add('show');
-        } else {
-            scrollBtn.classList.remove('show');
+        if (scrollBtn) {
+            if (window.scrollY > 400) {
+                scrollBtn.classList.add('show');
+            } else {
+                scrollBtn.classList.remove('show');
+            }
         }
     });
 
-    // scroll to top click
-    scrollBtn.addEventListener('click', function () {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+    if (scrollBtn) {
+        scrollBtn.addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
 
-    // smooth scroll for all anchor links with offset
     var anchors = document.querySelectorAll('a[href^="#"]');
     for (var i = 0; i < anchors.length; i++) {
         anchors[i].addEventListener('click', function (e) {
@@ -48,5 +51,5 @@ document.addEventListener('DOMContentLoaded', function () {
                 window.scrollTo({ top: top, behavior: 'smooth' });
             }
         });
-    });
+    }
 });
