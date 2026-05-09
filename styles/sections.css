@@ -1,0 +1,242 @@
+
+.projects {
+    background-color: #f5f9ff;
+    padding: 60px 5rem;
+    overflow: hidden;
+}
+
+body.dark .projects {
+    background-color: #000f30;
+}
+
+.project-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 0 12px;
+}
+
+body.dark .project-card {
+    background-color: #112145;
+}
+
+.project-card img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+.project-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.project-info span {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #102d47;
+}
+
+body.dark .project-info span {
+    color: #ffffff;
+}
+
+/* ===== STATS ===== */
+.stats {
+    display: flex;
+    gap: 24px;
+    padding: 60px 5rem;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    flex: 1;
+    min-width: 220px;
+    border: 1px solid rgba(16, 45, 71, 0.1);
+    border-radius: 12px;
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #ffffff;
+}
+
+body.dark .stat-card {
+    border-color: rgba(255, 255, 255, 0.1);
+    background-color: transparent;
+}
+
+.stat-icon {
+    display: inline-block;
+    background-color: #2f73f2;
+    border-radius: 50%;
+    padding: 10px;
+    margin-bottom: 16px;
+}
+
+.stat-card h3 {
+    margin-bottom: 8px;
+}
+
+.stat-card p {
+    font-size: 0.95rem;
+}
+
+/* ===== REVIEWS ===== */
+.reviews {
+    background-color: #f5f9ff;
+    padding: 60px 5rem;
+}
+
+body.dark .reviews {
+    background-color: #000f30;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.review-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+body.dark .review-card {
+    background-color: #112145;
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+.review-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review-header h4 {
+    font-size: 1rem;
+    margin-bottom: 2px;
+}
+
+.stars {
+    color: #eab308;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+
+.review-card p {
+    text-align: left;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* ===== EXPERTISE ===== */
+.expertise {
+    padding: 60px 5rem;
+}
+
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.expertise-card {
+    background-color: #f5f9ff;
+    border-radius: 12px;
+    padding: 32px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+body.dark .expertise-card {
+    background-color: #000f30;
+}
+
+.expertise-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.expertise-icon {
+    display: inline-block;
+    background-color: #2f73f2;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 24px;
+    box-shadow: 0 6px 20px rgba(47, 115, 242, 0.3);
+}
+
+.expertise-card h4 {
+    margin-bottom: 10px;
+}
+
+.expertise-card p {
+    text-align: left;
+    font-size: 0.95rem;
+    max-width: 280px;
+}
+
+/* ===== CATEGORIES ===== */
+.categories {
+    padding: 60px 5rem;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
+    gap: 24px;
+}
+
+.cat-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.cat-large {
+    grid-row: span 2;
+}
+
+.cat-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.cat-card.cat-large img {
+    min-height: 100%;
+}
+
+.cat-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(to bottom, transparent 20%, rgba(8, 23, 56, 0.85) 100%);
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+}
+
+.cat-card:hover .cat-label {
+    transform: translateY(0);
+}
